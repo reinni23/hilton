@@ -112,19 +112,18 @@ birthdayEl.addEventListener("focus", function () {
   }
 });
 // 동의 모두선택 / 해제
-$(document).ready(function () {
-  $("#chk01").click(function () {
-    if ($("#chk01").is(":checked"))
-      $("input[name=cagree]").prop("checked", true);
+$(document).ready(function() {
+  $("#chk01").click(function() {
+    if($("#chk01").is(":checked")) $("input[name=cagree]").prop("checked", true);
     else $("input[name=cagree]").prop("checked", false);
   });
-
-  $("input[name=cagree]").click(function () {
+  
+  $("input[name=cagree]").click(function() {
     var total = $("input[name=cagree]").length;
     var checked = $("input[name=cagree]:checked").length;
-
-    if (total != checked) $("#chk01").prop("checked", false);
-    else $("#chk01").prop("checked", true);
+    
+    if(total != checked) $("#chk01").prop("checked", false);
+    else $("#chk01").prop("checked", true); 
   });
 });
 
@@ -135,59 +134,8 @@ ResBtn.addEventListener("click", ResForm);
 function ResForm() {
   var ResFirst = document.querySelector("#chk02");
   var ResSecond = document.querySelector("#chk03");
-  var eNameF = document.getElementById("eNameF");
-  var eNameL = document.getElementById("eNameL");
-  var email_id = document.getElementById("email_id");
-  var uMail = document.getElementById("userEmail");
-  var mobile = document.getElementById("mobile");
-  var birthYear = document.getElementById("birth_year");
-  var birthMonth = document.getElementById("birth_month");
-  var birthDay = document.getElementById("birth_day");
-  
-  var reg = /^[0-9]+/g; //숫자만 입력하는 정규식
 
-  // 이름 유효성 검사
-  if (eNameF.value == "") {
-    alert("영문명(이름)을 입력하세요.");
-    return false;
-  } else if (eNameL.value == "") {
-    alert("영문명(성)을 입력하세요.");
-    return false;
-  }
-
-  // // 생년월일 유효성 검사 적용 해야함
-  // else if (birthYear.querySelector == "") {
-  //   alert("출생년도를 선택하세요.");  
-  //   return false;
-  // } else if (birthMonth.value == "") {
-  //   alert("출생월을 선택하세요.");
-  //   return false;
-  // } else if (birthDay.value == "") {
-  //   alert("출생일을 선택하세요.");
-  //   return false;
-  // }
-  
-  // 연락처 유효성 검사
-  else if (!reg.test(mobile.value)) {
-    alert("전화번호는 숫자만 입력할 수 있습니다.");
-    return false;
-  } else if (mobile.value.length < 10) {
-    alert("전화번호는 최소 10자리로 입력해주세요.");
-    return false;
-  }
-  // 이메일 유효성 검사
-  else if (email_id.value == "") {
-    alert("이메일 주소를 입력하세요.");
-    return false;
-  } else if (uMail.value == "") {
-    alert("이메일 주소를 입력하세요.");
-    return false;
-  }
-
-  //카드번호(정규식 검사)유효성 검사를 찾아볼 것
-  
-  //개인정보 수집 유효성 검사
-  else if (ResFirst.checked != true) {
+  if (ResFirst.checked != true) {
     alert("개인정보 수집에 동의해 주세요.");
     return false;
   } else if (ResSecond.checked != true) {
@@ -197,6 +145,7 @@ function ResForm() {
     location.href = "/";
   }
 }
+
 
 ////TOP JS//////////
 var locationSidebar = document.getElementById("location_side");
