@@ -26,12 +26,11 @@
 .complete_btn>input {
     width: 200px;
     padding: 15px 0;
-    background-color: #19344D;
-    color: #fff;
-    border: none;
+    border: 2px solid #b0afaf;
     outline: none;
     cursor: pointer;
     margin: 10px 10px;
+    border-radius: 5px;
 }
 
 .complete_btn>input:hover {

@@ -140,7 +140,7 @@ body {
     padding-top: 17px; 
     padding-bottom: 8px; 
     border: none;
-    border-bottom: 2px solid #19344D;
+    border-bottom: 2px solid #B0AFAF;
     background: url(../img/arrow_drop_down_.png) no-repeat 100% 70%;
     background-size: 17% 60%;
     font-family: inherit;
@@ -238,11 +238,15 @@ body {
 .main_search{
     align-self: center;
 }
-.main_search>span>a{
+.main_search>button{
+    cursor: pointer;
     padding: 8px 30px;
-    background-color: #19344D;
     font-size: 14px;
-    color: #fff;
+    font-weight: 500;
+    color: #494949;
+    background-color: transparent;
+    border: 1px solid #B0AFAF;
+    border-radius: 2px;
 }
 .main_search>span>a:active{
     opacity: 90%;
@@ -551,20 +555,17 @@ body {
 #Suite{
     background-image: url(../img/room6.png);
 }
-.main_roomtype_wrap>span{
+.navyBtn{
+    cursor: pointer;
     display: block;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-}
-.main_roomtype_wrap>span>a{
+    margin: auto;
     padding: 8px 30px;
-    background-color: #19344D;
+    margin-top: 30px;
+    background-color: transparent;
     font-size: 14px;
-    color: #fff;
-}
-.main_roomtype_wrap>span>a:active{
-opacity: 90%;
+    color: #494949;
+    border: 1px solid #B0AFAF;
+    border-radius: 2px;
 }
 /*******/
 .main_roomtypeM{

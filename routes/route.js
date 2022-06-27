@@ -227,4 +227,17 @@ router.get('/notice_deta', function(req, res) {
   });
 });
 
+router.post("/login", function(req, res){
+  let param = JSON.parse(JSON.stringify(req.body));
+  let id = param['joinid'];
+  let pw = param['joinpw'];
+  db.getlogin(id, (row)=>{
+    if(typeof id === 'undefined' || row.length <= 0){
+      res.status(404).json({error:'undefind id'});
+  } else if(pw == row.pw) {
+    res.redirect("/");
+  }
+  })
+})
+
 module.exports = router;

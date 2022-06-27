@@ -69,11 +69,8 @@ header .h_lang>a::after{
     
 }
 
-.first{
-    background-color: black;
-}
 .h_nav>ul>.first>a{
-    color: white;
+    color: black;
 
 }
 h1>a>img{

@@ -67,6 +67,7 @@
   line-height: 60px;
   color: var(--color);
   transition: 0.4s;
+  border-radius: 2px;
 }
 .btn_area a {
   --color: #494949;
@@ -340,6 +341,7 @@
   width: 120px;
   height: 40px;
   line-height: 42px;
+  border-radius: 2px;
 }
 .list_btn > a {
   padding: 8px 25px;

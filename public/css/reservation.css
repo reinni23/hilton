@@ -104,25 +104,26 @@ body {
 .reservation_1>button{
     cursor: pointer;
     width: 100%;
-    background-color: #19344D;
-    border: none;
+    background-color: #002453;
+    border-radius: 3px;
     padding: 15px 0;
     margin-bottom: 30px;
     color: #fff;
     outline: none; border: none;
 }
-.reservation_1>button:active{
-    opacity: 90%;
-}
 .reservation_inquiry{
     display: block;
     padding: 10px;
+    border-radius: 2px;
     box-sizing: border-box;
     background-color: #E6E3DB;
     color: #494949;
 }
 .reservation_inquiry>h6{
     font-weight: 500;
+}
+.reservation_inquiry>p{
+    font-size: 14px;
 }
 /****/
 #reservation_1_men{
@@ -268,22 +269,10 @@ body {
     outline: none;
     font-size: 14px;
 }
-.reservation_1>button{
-    cursor: pointer;
-    width: 100%;
-    background-color: #19344D;
-    border: none;
-    padding: 15px 0;
-    margin-bottom: 30px;
-    color: #fff;
-    outline: none; border: none;
-}
-.reservation_1>button:active{
-    opacity: 90%;
-}
 /******/
 .reservation_2{
     width: 871px;
+    /* letter-spacing: 0; */
 }
 .reservation_top{
     z-index: -99;
@@ -346,6 +335,7 @@ body {
     margin-bottom: 8px;
     padding: 4px 15px;
     font-size: 14px;
+    letter-spacing: 0;
     color: #fff;
 }
 .reservation_roomsL>h4{
@@ -359,8 +349,11 @@ body {
     margin-bottom: 8px;
 }
 .reservation_roomsL>p>a{
-    font-size: 16px;
+    display: block;
+    font-size: 14px;
+    margin-top: 7px;
     color: #494949;
+    letter-spacing: 0;
     text-decoration:underline;
 }
 /**/
@@ -384,18 +377,14 @@ body {
     display: block;
     padding: 8px 30px;
     box-sizing: border-box;
-    background-color: #19344D;
-    color: #fff;
+    background-color: #FFFEFB;
+    color: #494949;
+    border: 1px solid #ADABAB;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    /* border: 1px solid #C0BBAD; */
     text-align: center;
-}
-#reservation_selection>a{
-    cursor: pointer;
-    display: block;
-    padding: 8px 30px;
-    box-sizing: border-box;
-    background-color: #19344D;
-    color: #fff;
-    text-align: center;
+    border-radius: 3px;
 }
 .rooms_content {
     display: none;
@@ -610,6 +599,7 @@ textarea{
     background-color: #19344D;
     padding: 8px 30px;
     margin-top: 30px;
+    border-radius: 3px;
     box-sizing: border-box;
     color: #fff;
     text-align: center;

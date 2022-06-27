@@ -99,6 +99,7 @@
   border: 1px solid #fff;
   color: #fff;
   transition: 0.3s;
+  border-radius: 2px;
 }
 .room_detail_w:hover {
   background-color: #eeece7;
