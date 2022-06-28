@@ -48,6 +48,7 @@
   font-size: 14px;
   color: #494949;
 }
+
 /**/
 .notice_deta_bottom {
   display: flex;
@@ -60,6 +61,11 @@
   border: 1px solid #494949;
   color: #494949;
   border-radius: 2px;
+  transition: 0.3s;
+}
+.notice_deta_bottom > a :hover {
+  background-color: rgb(118, 118, 118);
+  color: white;
 }
 .notice_btn1 {
   display: flex;

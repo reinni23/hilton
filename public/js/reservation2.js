@@ -67,7 +67,7 @@ var now = new Date();
 var year = now.getFullYear();
 var adult = year - 19;
 
-const birthYearEl = document.querySelector("#birth_year");
+const birthYearEl = document.querySelector("#birthyear");
 isYearOptionExisted = false;
 birthYearEl.addEventListener("focus", function () {
   if (!isYearOptionExisted) {
@@ -82,7 +82,7 @@ birthYearEl.addEventListener("focus", function () {
 });
 
 //월 생성
-const birthmonthEl = document.querySelector("#birth_month");
+const birthmonthEl = document.querySelector("#birthmonth");
 isMonthOptionExisted = false;
 birthmonthEl.addEventListener("focus", function () {
   if (!isMonthOptionExisted) {
@@ -97,7 +97,7 @@ birthmonthEl.addEventListener("focus", function () {
 });
 
 //일 생성
-const birthdayEl = document.querySelector("#birth_day");
+const birthdayEl = document.querySelector("#birthday");
 isDayOptionExisted = false;
 birthdayEl.addEventListener("focus", function () {
   if (!isDayOptionExisted) {
@@ -112,36 +112,35 @@ birthdayEl.addEventListener("focus", function () {
   }
 });
 
-//회원가입 유효성 검사
-function ResCheck() {
+//예약확인 버튼
+var ResBtn = document.querySelector("#ResBtn");
+ResBtn.addEventListener("click", ResChk);
+
+//유효성 검사
+function ResChk() {
   var email_id = document.getElementById("email_id");
   var uMail = document.getElementById("userEmail");
   var eNameF = document.getElementById("eNameF");
   var eNameL = document.getElementById("eNameL");
-  var mobile = document.getElementById("mobile");
   var reg = /^[0-9]+/g;
-  var birthYear = document.getElementById("birth_year");
-  var birthMonth = document.getElementById("birth_month");
-  var birthDay = document.getElementById("birth_day");
+  var mobile = document.getElementById("mobile");
+  var birthYear = document.getElementById("birthyear");
+  var birthMonth = document.getElementById("birthmonth");
+  var birthDay = document.getElementById("birthday");
+  var cardSelect = document.getElementById("cardselect");
+  var cardNum = document.getElementById("cardnum");
+  var cardCVC = document.getElementById("cardcvc");
+  var selmonth = document.getElementById("selmonth");
+  var selyear = document.getElementById("selyears");
 
-  // 이름 유효성 검사
+  // 유효성 검사 항목
   if (eNameF.value == "") {
     alert("영문명(이름)을 입력하세요.");
     return false;
   } else if (eNameL.value == "") {
     alert("영문명(성)을 입력하세요.");
     return false;
-    
-  } else if (email_id.value == "") {
-    alert("이메일 주소를 입력하세요.");
-    return false;
-  } else if (uMail.value == "") {
-    alert("이메일 주소를 입력하세요.");
-    return false;
-  }
-
-  // 생년월일 유효성 검사 적용 해야함
-  else if (birthYear.value == "") {
+  } else if (birthYear.value == "") {
     alert("출생년도를 선택하세요.");
     return false;
   } else if (birthMonth.value == "") {
@@ -150,39 +149,39 @@ function ResCheck() {
   } else if (birthDay.value == "") {
     alert("출생일을 선택하세요.");
     return false;
-  }
-
-  // 연락처 유효성 검사
-  else if (!reg.test(mobile.value)) {
+  } else if (!reg.test(mobile.value)) {
     alert("전화번호는 숫자만 입력할 수 있습니다.");
     return false;
-  } else if (mobile.value.length != 11) {
-    alert("전화번호는 11자리로 입력해주세요.");
+  } else if (mobile.value.length != 10) {
+    alert("전화번호는 10자리로 입력해주세요.");
+    return false;
+  } else if (email_id.value == "") {
+    alert("이메일 주소를 입력하세요.");
+    return false;
+  } else if (uMail.value == "") {
+    alert("이메일 주소를 입력하세요.");
+    return false;
+  } else if (cardSelect.value == "") {
+    alert("카드를 선택하세요.");
+    return false;
+  } else if (cardNum.value == "") {
+    alert("카드번호를 입력하세요.");
+    return false;
+  } else if (cardCVC.value == "") {
+    alert("CVC(뒤 3자리)를 입력하세요.");
+    return false;
+  } else if (selmonth.value == "") {
+    alert("카드 월일을 선택하세요.");
+    return false;
+  } else if (selyear.value == "") {
+    alert("카드 년도를 선택하세요.");
     return false;
   } else {
-    location.href = "/";
+    "click", ResForm();
   }
 }
-// 동의 모두선택 / 해제
-$(document).ready(function() {
-  $("#chk01").click(function() {
-    if($("#chk01").is(":checked")) $("input[name=cagree]").prop("checked", true);
-    else $("input[name=cagree]").prop("checked", false);
-  });
-  
-  $("input[name=cagree]").click(function() {
-    var total = $("input[name=cagree]").length;
-    var checked = $("input[name=cagree]:checked").length;
-    
-    if(total != checked) $("#chk01").prop("checked", false);
-    else $("#chk01").prop("checked", true); 
-  });
-});
 
 // 개인정보 동의 유효성
-var ResBtn = document.querySelector("#ResBtn");
-ResBtn.addEventListener("click", ResForm);
-
 function ResForm() {
   var ResFirst = document.querySelector("#chk02");
   var ResSecond = document.querySelector("#chk03");
@@ -194,10 +193,26 @@ function ResForm() {
     alert("결제취소 규정에 동의해 주세요.");
     return false;
   } else {
-    location.href = "/";
+    (location.href = "/reservation3"), submit();
   }
 }
 
+// 동의 모두선택 / 해제
+$(document).ready(function () {
+  $("#chk01").click(function () {
+    if ($("#chk01").is(":checked"))
+      $("input[name=cagree]").prop("checked", true);
+    else $("input[name=cagree]").prop("checked", false);
+  });
+
+  $("input[name=cagree]").click(function () {
+    var total = $("input[name=cagree]").length;
+    var checked = $("input[name=cagree]:checked").length;
+
+    if (total != checked) $("#chk01").prop("checked", false);
+    else $("#chk01").prop("checked", true);
+  });
+});
 
 ////TOP JS//////////
 var locationSidebar = document.getElementById("location_side");

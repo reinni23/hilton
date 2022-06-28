@@ -26,13 +26,15 @@
 .complete_btn>input {
     width: 200px;
     padding: 15px 0;
-    border: 2px solid #b0afaf;
+    border: 1px solid rgb(118,118,118);
     outline: none;
     cursor: pointer;
     margin: 10px 10px;
-    border-radius: 5px;
+    border-radius: 2px;
+    background-color: transparent;
 }
 
 .complete_btn>input:hover {
-    opacity: 0.8;
+    background-color: rgb(118,118,118);
+    color: #fff;
 }

@@ -57,7 +57,7 @@
       </ul>
       <ul class="notice_table_body">
         <% rows.forEach((row, index)=>{ %>
-        <li class="tabcontent" onclick="javascript:location.href='/notice_deta?id=<%=row.id%>'">
+        <li class="tabcontent paging" onclick="javascript:location.href='/notice_deta?id=<%=row.id%>'">
           <p class="noticeItem">
             <%= row.noticeItem%>
           </p>
@@ -66,6 +66,11 @@
           </p>
          </li>
          <% }) %>
+
+         <nav aria-label="Page navigation example">
+          <ul class="pagination pagination-seperated "></ul>
+        </nav>
+
          <script src="../js/notice.js"></script>
   </section>
 </main>

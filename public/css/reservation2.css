@@ -126,10 +126,10 @@
 .pay_width {
   width: 100%;
 }
-.card_num {
+.cardnum {
   width: calc(20% - 10px);
 }
-.card_num:last-child {
+.cardnum:last-child {
   margin-left: 0;
 }
 /* ----------------------------------------------------------------------------- */
@@ -383,7 +383,7 @@
     font-size: 20px;
     padding: 30px 0;
   }
-  .card_num {
+  .cardnum {
     width: 19%;
   }
   .rf_terms li {
@@ -404,7 +404,7 @@
   .rf_info li {
     font-size: 12px;
   }
-  .card_num {
+  .cardnum {
     width: 13%;
   }
   .caution_wrap {
