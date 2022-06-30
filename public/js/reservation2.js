@@ -128,7 +128,10 @@ function ResChk() {
   var birthMonth = document.getElementById("birthmonth");
   var birthDay = document.getElementById("birthday");
   var cardSelect = document.getElementById("cardselect");
-  var cardNum = document.getElementById("cardnum");
+  var cardNum1 = document.getElementById("cardnum1");
+  var cardNum2 = document.getElementById("cardnum2");
+  var cardNum3 = document.getElementById("cardnum3");
+  var cardNum4 = document.getElementById("cardnum4");
   var cardCVC = document.getElementById("cardcvc");
   var selmonth = document.getElementById("selmonth");
   var selyear = document.getElementById("selyears");
@@ -164,10 +167,19 @@ function ResChk() {
   } else if (cardSelect.value == "") {
     alert("카드를 선택하세요.");
     return false;
-  } else if (cardNum.value == "") {
+  } else if (cardNum1.value.length !== 4) {
     alert("카드번호를 입력하세요.");
     return false;
-  } else if (cardCVC.value == "") {
+  } else if (cardNum2.value.length !== 4) {
+    alert("카드번호를 입력하세요.");
+    return false;
+  } else if (cardNum3.value == "") {
+    alert("카드번호를 입력하세요.");
+    return false;
+  } else if (cardNum4.value.length !== 4) {
+    alert("카드번호를 입력하세요.");
+    return false;
+  } else if (cardCVC.value.length !== 3) {
     alert("CVC(뒤 3자리)를 입력하세요.");
     return false;
   } else if (selmonth.value == "") {

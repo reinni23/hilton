@@ -73,27 +73,14 @@ function pagination() {
     num_pages = Math.floor(num_pages++);
   }
 
-  jQuery(".pagination").append(
-    '<li class="page-item">' +
-      '<a class="page-link" href="#" aria-label="Previous">' +
-      '<span aria-hidden="true" class="mdi mdi-chevron-left"></span>' +
-      '<span class="sr-only">Previous</span></a></li>'
-  );
 
   for (var i = 1; i <= num_pages; i++) {
     jQuery(".pagination").append(
       '<li class="page-item "><a class="page-link" href="#">' + i + "</a></li>"
     );
-    jQuery(".pagination li:nth-child(2)").addClass("active");
+    jQuery(".pagination li:nth-child(2)").addClass("notice_colorr");
     jQuery(".pagination a").addClass("pagination-link");
   }
-
-  jQuery(".pagination").append(
-    '<li class="page-item">' +
-      '<a class="page-link" href="#" aria-label="Next">' +
-      '<span aria-hidden="true" class="mdi mdi-chevron-right"></span>' +
-      '<span class="sr-only">Next</span></a></li>'
-  );
 
   $tr.each(function (i) {
     jQuery(this).hide();
@@ -110,8 +97,8 @@ function pagination() {
     var start = temp * req_num_row;
     var current_link = temp;
 
-    jQuery(".pagination li").removeClass("active");
-    jQuery(this).parent().addClass("active");
+    jQuery(".pagination li").removeClass("notice_colorr");
+    jQuery(this).parent().addClass("notice_colorr");
 
     for (var i = 0; i < req_num_row; i++) {
       $tr.eq(start + i).show();
@@ -126,17 +113,17 @@ function pagination() {
 
   jQuery(".prev").click(function (e) {
     e.preventDefault();
-    jQuery(".pagination li:first-child").removeClass("active");
+    jQuery(".pagination li:first-child").removeClass("notice_colorr");
   });
 
   jQuery(".next").click(function (e) {
     e.preventDefault();
-    jQuery(".pagination li:last-child").removeClass("active");
+    jQuery(".pagination li:last-child").removeClass("notice_colorr");
   });
 }
 
 jQuery("document").ready(function () {
   pagination();
 
-  jQuery(".pagination li:first-child").addClass("disabled");
+  jQuery(".pagination li:first-child").addClass("notice_colorr");
 });

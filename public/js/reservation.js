@@ -16,34 +16,13 @@ function openCloseToc1M() {
 };
 
 
-// ////아코디언 하나만////
-// var acc = document.getElementsByClassName("reservation_rooms");
-// var i;
-        
-//   for (i = 0; i < acc.length; i++) {
-//     acc[i].addEventListener("click", function() {
-//       this.classList.toggle("active");
-//       var panel = document.getElementsByClassName("rooms_content");
-//       if (panel.style.maxHeight) {
-//         panel.style.maxHeight = null;
-//       } else {
-//         var act = document.querySelectorAll('.reservation_rooms.active');
-//         for(j=0; j<act.length; j++){
-//             act[j].classList.remove('active');
-//             act[j].nextElementSibling.style.maxHeight = null;
-//         }
-//         this.classList.add('active');
-//         panel.style.maxHeight = panel.scrollHeight + "px";
-//         } 
-//     });
-//   }
 
 
 
 ////////////룸온니 객실/////////////
 
 
-////객실선택 띄우기(룸온니)
+//객실선택 띄우기(룸온니)
 
 function ROOMONLY() {
   if(document.getElementById('rooms_content_1').style.display === 'block') {
@@ -173,30 +152,6 @@ function openCloseToc34() {
     document.getElementById('option3-4').style.display = 'block';
   }
 };
-/////////////달력///////////////
-$.datepicker.setDefaults({
-  dateFormat: 'yy-mm-dd',
-  prevText: '이전 달',
-  nextText: '다음 달',
-  monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-  monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-  dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-  dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-  dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-  showMonthAfterYear: true,
-  yearSuffix: '년'
-});
-
-$("#main_IN").datepicker({
-minDate:0,
-onSelect: function(selected) {
-$("#main_OUT").datepicker("option","minDate", selected)}
-});
-
-$("#main_OUT").datepicker({
-onSelect: function(selected) {
-$("#main_IN").datepicker("option","maxDate", selected)}
-});
 //////////////////인원카운트//////////////////////
 
 function resAdult(type)  {

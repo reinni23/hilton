@@ -51,13 +51,13 @@
     <section class="notice_table">
       <ul>
           <li class="notice_table_top">
-              <p style="width: 20%;">구분</p>
-              <p style="width: 70%;">전체</p>
+              <p>구분</p>
+              <p>전체</p>
           </li>
       </ul>
       <ul class="notice_table_body">
         <% rows.forEach((row, index)=>{ %>
-        <li class="tabcontent paging" onclick="javascript:location.href='/notice_deta?id=<%=row.id%>'">
+        <li class="tabcontent paging <%= row.noticeItem%>" onclick="javascript:location.href='/notice_deta?id=<%=row.id%>'">
           <p class="noticeItem">
             <%= row.noticeItem%>
           </p>
@@ -68,9 +68,9 @@
          <% }) %>
 
          <nav aria-label="Page navigation example">
-          <ul class="pagination pagination-seperated "></ul>
+          <ul class="pagination pagination-seperated notice_num "></ul>
         </nav>
 
-         <script src="../js/notice.js"></script>
+         <script src="../js/notice.js"></script>  
   </section>
 </main>

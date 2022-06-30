@@ -39,8 +39,8 @@ $.datepicker.setDefaults({
     });
 
     //예약 페이지 달력
-
     $("#ResCheakIn").datepicker({
+        minDate:0,
         onSelect: function(selected) {
         $("#ResCheakOut").datepicker("option","minDate", selected)}
     });
@@ -49,7 +49,6 @@ $.datepicker.setDefaults({
         onSelect: function(selected) {
         $("#ResCheakIn").datepicker("option","maxDate", selected)}
     });
-
     //예약 모바일 페이지 달력
 
     $("#ResCheakInM").datepicker({
