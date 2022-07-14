@@ -8,49 +8,50 @@ $(document).ready(function () {
     $(".fontAll").css("color", "#494949");
   });
   $("#AMENITIES").click(function () {
-    $(".tabcontent").hide(), $(aAMENITIES).show(0);
+    $(".tabcontent").hide(), 
+    $(".AMENITIES").show(0);
     $(".noti_graybar").css({ left: "12.3%" });
     $(".grayfont").css("color", "#B0AFAF");
     $(".fontAmenities").css("color", "#494949");
   });
   $("#SERVICE").click(function () {
     $(".tabcontent").hide();
-    $(".aSERVICE").show();
+    $(".SERVICE").show();
     $(".noti_graybar").css({ left: "26%" });
     $(".grayfont").css("color", "#B0AFAF");
     $(".fontService").css("color", "#494949");
   });
   $("#MEETING").click(function () {
     $(".tabcontent").hide();
-    $(".aMEETING").show();
+    $(".MEETING").show();
     $(".noti_graybar").css({ left: "38.7%" });
     $(".grayfont").css("color", "#B0AFAF");
     $(".fontMeeting").css("color", "#494949");
   });
   $("#ROOMS").click(function () {
     $(".tabcontent").hide();
-    $(".aROOMS").show();
+    $(".ROOMS").show();
     $(".noti_graybar").css({ left: "51.2%" });
     $(".grayfont").css("color", "#B0AFAF");
     $(".fontRooms").css("color", "#494949");
   });
   $("#DINING").click(function () {
     $(".tabcontent").hide();
-    $(".aDINING").show();
+    $(".DINING").show();
     $(".noti_graybar").css({ left: "63.5%" });
     $(".grayfont").css("color", "#B0AFAF");
     $(".fontDining").css("color", "#494949");
   });
   $("#EVENT").click(function () {
     $(".tabcontent").hide();
-    $(".aEVENT").show();
+    $(".EVENT").show();
     $(".noti_graybar").css({ left: "75%" });
     $(".grayfont").css("color", "#B0AFAF");
     $(".fontEvent").css("color", "#494949");
   });
   $("#PARKIING").click(function () {
     $(".tabcontent").hide();
-    $(".aPARKIING").show();
+    $(".PARKIING").show();
     $(".noti_graybar").css({ left: "88%" });
     $(".grayfont").css("color", "#B0AFAF");
     $(".fontParking").css("color", "#494949");

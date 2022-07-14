@@ -1,11 +1,11 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-    host : 'localhost',
-    user : 'root', //ID
-    password : '1234', //비밀번호
+    host : 'us-cdbr-east-06.cleardb.net',
+    user : 'b5bd7cdaadb018', //ID
+    password : '13d5f8e9', //비밀번호
     port : '3306',
-    database : 'hilton',
+    database : 'heroku_f97f076ebe21e80',
     dateStrings: "date" //날짜 시간 출력
   });
 

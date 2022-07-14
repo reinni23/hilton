@@ -46,7 +46,6 @@ header .h_lang>a::after{
     border: none;
     margin-right: 5px;
     font-size: 14px;
-    cursor: pointer;
 }
 .h_nav>ul{
     display: flex;
@@ -745,7 +744,7 @@ h1>a>img{
         display: block;
     }
     .fullscreen_menu>ul>li>a {
-        font-size: 14px;
+        font-size: 16px;
     }
     .footer_left>h1 {
         width: 140px;
@@ -819,6 +818,9 @@ h1>a>img{
 
 
 @media only screen and (max-width: 375px) {
+    .fullscreen_menu>ul>li>a {
+        font-size: 16px;
+    }
     .fullscreen_menu>ul>li>img {
         width: 25px;
         height: 25px;
